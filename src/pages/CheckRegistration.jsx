@@ -39,7 +39,7 @@ const CheckRegistration = () => {
                     id="hero-field"
                     name="hero-field"
                     placeholder="شماره همراه "
-                    value={phone}
+                    value={phone|| ""}
                     onChange={(e) => {
                       setPhone(e.target.value);
                       validator.current.showMessageFor("phone");

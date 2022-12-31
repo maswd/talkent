@@ -12,6 +12,7 @@ import { showLoading, hideLoading } from 'react-redux-loading-bar'
 const UserContext = ({ children }) => {
     const history = useNavigate()
     const [phone, setPhone] = useState("")
+    console.log(phone);
     const [firstName, setFirstName] = useState("");
     const [lastName, setLastName] = useState("");
     const [token, setToken] = useState([]);
@@ -58,6 +59,7 @@ const UserContext = ({ children }) => {
 
     const handleCheck = async e => {
         e.preventDefault();
+        console.log(e);
         try {
             const { status } = await checkPhone({ phone: phone })
             if (status === 200) {
